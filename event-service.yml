@@ -2,6 +2,12 @@ server:
   port: 8081
 
 spring:
+  application:
+    name: event-service
+
+  config:
+    import: optional:configserver:http://localhost:8888
+
   datasource:
     url: jdbc:mysql://localhost:3307/db_event?useSSL=false&serverTimezone=UTC
     username: event_user
